@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/weather.tscn" type="PackedScene" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Weather" parent="." instance=ExtResource( 2 )]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 492.0
+margin_bottom = 365.0
+text = "THIS IS A SAMPLE SCENE WITH A WEATHER NODE
+
+Just put a \"Weather\" node in any scene and change the settings in the inspector to see your weather effect.
+
+Set the \"Follow Node\" variable to the player or the camera to make sure the weather generator follows the action of your game or scene.
+
+The \"snow.png\" and \"rain.png\" files can be replaced to implement a different shape. Just put 10 \"drops\" of rain (or snow) from smaller to bigger in a horizontal file and see the results..."
+__meta__ = {
+"_edit_use_anchors_": false
+}

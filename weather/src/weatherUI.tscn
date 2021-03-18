@@ -1,0 +1,241 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/WeatherUI.gd" type="Script" id=1]
+
+[node name="WeatherUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="weatherTypeList" type="ItemList" parent="."]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 350.0
+margin_bottom = 115.0
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="windSlider" type="HSlider" parent="."]
+margin_left = 50.0
+margin_top = 150.0
+margin_right = 350.0
+margin_bottom = 166.0
+min_value = -1.0
+max_value = 1.0
+step = 0.1
+tick_count = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sizeSlider" type="HSlider" parent="."]
+margin_left = 50.0
+margin_top = 200.0
+margin_right = 350.0
+margin_bottom = 216.0
+max_value = 1.0
+step = 0.1
+value = 0.3
+tick_count = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="amountSlider" type="HSlider" parent="."]
+margin_left = 50.0
+margin_top = 250.0
+margin_right = 350.0
+margin_bottom = 266.0
+max_value = 5000.0
+value = 1500.0
+tick_count = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lightSlider" type="HSlider" parent="."]
+margin_left = 50.0
+margin_top = 300.0
+margin_right = 350.0
+margin_bottom = 316.0
+max_value = 1.0
+step = 0.1
+value = 1.0
+tick_count = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="snowDarkSlider" type="HSlider" parent="."]
+margin_left = 50.0
+margin_top = 350.0
+margin_right = 350.0
+margin_bottom = 366.0
+max_value = 1.0
+step = 0.1
+value = 0.2
+tick_count = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="rainDarkSlider" type="HSlider" parent="."]
+margin_left = 50.0
+margin_top = 400.0
+margin_right = 350.0
+margin_bottom = 416.0
+max_value = 1.0
+step = 0.1
+value = 0.3
+tick_count = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lightTimeSlider" type="HSlider" parent="."]
+margin_left = 50.0
+margin_top = 450.0
+margin_right = 350.0
+margin_bottom = 466.0
+max_value = 30.0
+value = 2.0
+tick_count = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="weatherTimeSlider" type="HSlider" parent="."]
+margin_left = 50.0
+margin_top = 500.0
+margin_right = 350.0
+margin_bottom = 516.0
+max_value = 30.0
+value = 2.0
+tick_count = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions" type="RichTextLabel" parent="."]
+margin_left = 781.122
+margin_top = 67.7348
+margin_right = 994.122
+margin_bottom = 520.735
+text = "Use this scene to test different weather types and variables.
+
+Mainly adjust Weather Type, Wind & Size.
+
+It's not recommended to change \"Particles Amount\" while rain or snow are falling!!  Godot restarts the particle system every time. I made it in a way that the new particles start already in an advanced status to minimize the \"jumping\" effect, but still it looks weird.
+
+Light / Darkness is the general light or darkness for the scene.
+
+Snow and Rain Darken Amounts define how much the scene darkens when any of these weather start. The amount of darkness depends also on the Weather Size.
+
+Light and Weather Changing Times are how long it takes for Light and Weather variables to adjust everytime it changes."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="weatherTypeLabel" type="Label" parent="."]
+margin_left = 400.0
+margin_top = 75.0
+margin_right = 488.0
+margin_bottom = 89.0
+text = "Weather Type"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="windLabel" type="Label" parent="."]
+margin_left = 400.0
+margin_top = 150.0
+margin_right = 440.0
+margin_bottom = 164.0
+text = "Wind"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sizeLabel" type="Label" parent="."]
+margin_left = 400.0
+margin_top = 200.0
+margin_right = 495.0
+margin_bottom = 214.0
+text = "Rain/Snow Size"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="amountLabel" type="Label" parent="."]
+margin_left = 400.0
+margin_top = 250.0
+margin_right = 617.0
+margin_bottom = 264.0
+text = "Particles Amount (Standard: 1500)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lightLabel" type="Label" parent="."]
+margin_left = 400.0
+margin_top = 300.0
+margin_right = 582.0
+margin_bottom = 314.0
+text = "Light / Darkness (Standard 1)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="snowDarkLabel" type="Label" parent="."]
+margin_left = 400.0
+margin_top = 350.0
+margin_right = 632.0
+margin_bottom = 364.0
+text = "Snow Darken Amount (Standard: 0.2)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="rainDarkLabel" type="Label" parent="."]
+margin_left = 400.0
+margin_top = 400.0
+margin_right = 632.0
+margin_bottom = 414.0
+text = "Rain Darken Amount (Standard: 0.3)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lightTimeLabel" type="Label" parent="."]
+margin_left = 400.0
+margin_top = 450.0
+margin_right = 668.0
+margin_bottom = 464.0
+text = "Light Changing Time (Standard: 2 seconds)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="weatherTimeLabel" type="Label" parent="."]
+margin_left = 400.0
+margin_top = 500.0
+margin_right = 691.0
+margin_bottom = 514.0
+text = "Weather Changing Time (Standard: 2 seconds)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="item_selected" from="weatherTypeList" to="." method="_on_weatherTypeList_item_selected"]
+[connection signal="value_changed" from="windSlider" to="." method="_on_windSlider_value_changed"]
+[connection signal="value_changed" from="sizeSlider" to="." method="_on_sizeSlider_value_changed"]
+[connection signal="value_changed" from="amountSlider" to="." method="_on_amountSlider_value_changed"]
+[connection signal="value_changed" from="lightSlider" to="." method="_on_lightSlider_value_changed"]
+[connection signal="value_changed" from="snowDarkSlider" to="." method="_on_snowDarkSlider_value_changed"]
+[connection signal="value_changed" from="rainDarkSlider" to="." method="_on_rainDarkSlider_value_changed"]
+[connection signal="value_changed" from="lightTimeSlider" to="." method="_on_lightTimeSlider_value_changed"]
+[connection signal="value_changed" from="weatherTimeSlider" to="." method="_on_weatherTimeSlider_value_changed"]
