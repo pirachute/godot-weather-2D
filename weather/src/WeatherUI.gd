@@ -1,8 +1,16 @@
-# extends "res://src/WeatherControl.gd"
 extends Control
 
 var weatherType = ["clear", "rain", "snow"]
+
 onready var weatherTypeList = $weatherTypeList
+onready var windSlider = $windSlider
+onready var sizeSlider = $sizeSlider
+onready var amountSlider = $amountSlider
+onready var lightSlider = $lightSlider
+onready var snowDarkSlider = $snowDarkSlider
+onready var rainDarkSlider = $rainDarkSlider
+onready var lightTimeSlider = $lightTimeSlider
+onready var weatherTimeSlider = $weatherTimeSlider
 
 export var weatherNode: NodePath = "../Weather"
 onready var weather: Node2D = get_node(weatherNode)
@@ -11,6 +19,21 @@ func _ready() -> void:
 	weatherTypeList.add_item(weatherType[0])
 	weatherTypeList.add_item(weatherType[1])
 	weatherTypeList.add_item(weatherType[2])
+	
+	# Set initial weather to initial slider values
+	# weather.weatherType = weatherTypeList
+	weather.wind = windSlider.value
+	weather.size = sizeSlider.value
+	weather.amount = amountSlider.value
+	weather.light = lightSlider.value
+	weather.snow_darkness = snowDarkSlider.value
+	weather.rain_darkness = rainDarkSlider.value
+	weather.lightChangeTime = lightTimeSlider.value
+	weather.weatherChangeTime = weatherTimeSlider.value
+	
+	# APPLY INITIAL WEATHER
+	weather.change_weather()
+	
 
 func _on_windSlider_value_changed(value: float) -> void:
 	# print("Wind: ", value)

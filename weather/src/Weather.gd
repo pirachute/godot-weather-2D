@@ -13,7 +13,9 @@ export (float, 1, 300) var weatherChangeTime = 2
 
 var nightColor: Color = Color.white # color SUBTRACTED to scene
 
-export var followNode: NodePath = "../Player"
+# You can set this to the Player or another node you want the weather system to "follow".
+# This way the weather effect will always be visible
+export var followNode: NodePath # = "../Player"
 
 onready var snow = $Snow
 onready var rain = $Rain
@@ -27,12 +29,7 @@ onready var follow: Node2D = get_node(followNode)
 var last_control: Control
 var last_amount: int
 
-# Declare member variables here. Examples:
-# var a: int = 2
-# var b: String = "text"
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	change_weather()
 	darkness_position()
