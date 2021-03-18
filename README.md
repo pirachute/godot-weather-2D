@@ -3,9 +3,9 @@ An easy to use 2D Weather for Godot games including wind, rain, snow and some sc
 
 
 
-HOW TO USE ----------------------
+# HOW TO USE ----------------------
 
-WEATHER NODEJust put a "Weather" node in any scene and change the settings in the inspector to see your weather effect.
+WEATHER NODE: Just put a "Weather" node in any scene and change the settings in the inspector to see your weather effect.
 
 FOLLOW NODE (Property): Set the "Follow Node" property to the player or the camera to make sure the weather generator follows the action of your game or scene.
 
@@ -13,7 +13,7 @@ CHANGE THE TEXTURE: The "snow.png" and "rain.png" files can be replaced to imple
 
 
 
-WHAT CAN I CHANGE? -------------
+# WHAT CAN I CHANGE? -------------
 
 WEATHER TYPE (weatherType): clear, rain, snow
 
@@ -49,11 +49,11 @@ FOLLOW NODE (followNode) (path to the node to follow): Set the "Follow Node" pro
 
 
 
-WEATHER COLLIDER --------------
+# WEATHER COLLIDER --------------
 
 The "Weather Collider" is made so you can easily manage the weather changes in your game when the player "touches" certain areas.
 
-HOW IT WORKS:
+# HOW IT WORKS:
 
 1. Place one of these on the same scene of your "Weather" node.
 
@@ -65,7 +65,7 @@ Anything that enters this area will change the weather to the provided settings.
 
 
 
-CONTROLLING FROM CODE ---------
+# CONTROLLING FROM CODE ---------
 
 1. Make a reference to the "Weather" node in your program
 
@@ -75,8 +75,9 @@ CONTROLLING FROM CODE ---------
 
 
 
-EXAMPLE CODE:
+# EXAMPLE CODE:
 
+```
 # Weather Reference
 onready var weather: Node2D = get_node(weatherNode)
 
@@ -86,3 +87,4 @@ weather.change_weather()
 
 # Applyc Changes
 weather.change_weather()
+```
