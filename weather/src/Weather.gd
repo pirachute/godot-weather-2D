@@ -23,7 +23,7 @@ onready var darkness = $Darkness
 onready var tween = $Tween
 
 # Emiter folows position of this node.
-onready var follow: Node2D = get_node(followNode)
+onready var follow: Node2D = get_node_or_null(followNode) # Thanks KamiGrave for this tip!!
 
 # Set from WeatherControl to ignores last weather change
 var last_control: Control
